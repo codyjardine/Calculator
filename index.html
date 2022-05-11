@@ -7,40 +7,55 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@100,600;106.5,472&display=swap"
         rel="stylesheet">
-    <link rel="styleSheet" href="style.css">
+    <link rel="styleSheet" href="styleDark.css" id='pageStyle'>
+    <script src='script.js' defer></script>
   <title>Calculator</title>
 </head>
 <body>
 
-  <div class='containerCalculator'>
-    <div class='display' id='display'></div>
+  <div class='wrapper'>
+    <div class='containerCalculator'>
+      <div id='display'>
+        <span id='displayContent'>0</span>
+      </div>
 
-    <button class="clearAll">AC</button>
-    <button class="clear">C</button>
-    <button class="delete">DEL</button>
-    <button class="operator">+/-</button>
+      <button data-value='Backspace' class="delete" id='delete'>⬅</button>
+      <button data-value='AC' class="clearAll" id='clearAll'>CE</button>
+      <button data-value='C' class="clear" id='clear'>C</button>
+      <button data-value='negative' class="operator" id='negative'>+/-</button>
 
-    <button class="digit">7</button>
-    <button class="digit">8</button>
-    <button class="digit">9</button>
-    <button class="operator">÷</button>
+      <button data-value='7' data-type='number' class="digit" id='7'>7</button>
+      <button data-value='8' data-type='number' class="digit" id='8'>8</button>
+      <button data-value='9' data-type='number' class="digit" id='9'>9</button>
+      <button data-value='/' data-type='operator' class="operator" id='divide'>÷</button>
 
-    <button class="digit">4</button>
-    <button class="digit">5</button>
-    <button class="digit">6</button>
-    <button class="operator">x</button>
+      <button data-value='4' data-type='number' class="digit" id='4'>4</button>
+      <button data-value='5' data-type='number' class="digit" id='5'>5</button>
+      <button data-value='6' data-type='number' class="digit" id='6'>6</button>
+      <button data-value='*' data-type='operator' class="operator" id='multiply'>x</button>
 
-    <button class="digit">1</button>
-    <button class="digit">2</button>
-    <button class="digit">3</button>
-    <button class="operator">+</button>
+      <button data-value='1' data-type='number' class="digit" id='1'>1</button>
+      <button data-value='2' data-type='number' class="digit" id='2'>2</button>
+      <button data-value='3' data-type='number' class="digit" id='3'>3</button>
+      <button data-value='+' data-type='operator' class="operator" id='add'>+</button>
 
-    <button class="decimal">.</button>
-    <button class="digit">0</button>
-    <button class="equals">=</button>
-    <button class="operator">-</button>
+      <button data-value='.' class="decimal" id='decimal'>.</button>
+      <button data-value='0' data-type='number' class="digit" id='0'>0</button>
+      <button data-value='Enter' class="equals" id='equals'>=</button>
+      <button data-value='-' data-type='operator' class="operator" id='subtract'>-</button>
+    </div>
 
-
+    <div class='options'>
+      <span>USE DARK MODE?</span>
+      <label class="switch">
+        <input onclick='changeStyleSheet()' type="checkbox" class="checkbox" id='checkbox' checked>
+        <span class="toggle">
+             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill:#4ADE80;transform:-ms-filter">
+               <path d="M10 15.586L6.707 12.293 5.293 13.707 10 18.414 19.707 8.707 18.293 7.293z"></path></svg>
+             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill:#F87171;transform:-ms-filter">
+               <path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"></path></svg>
+        </span>
+   </label>
     </div>
   </div>
 </body>
