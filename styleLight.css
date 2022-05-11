@@ -81,7 +81,7 @@ button {
   grid-template-columns: repeat(4, 100px);
   font-family: "Inconsolata", monospace;
   font-weight: 600;
-  filter: drop-shadow(0 0 1rem #999);
+  box-shadow: 5px 5px 5px #000;
 }
 
 .containerCalculator > button, .equals {
