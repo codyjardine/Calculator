@@ -16,34 +16,34 @@
   <div class='wrapper'>
     <div class='containerCalculator'>
       <div id='display'>
-        <div class='previousOperand' id='previousOperand'>512 * 3165</div>
+        <div data-previous-operand class='previousOperand' id='previousOperand'></div>
         <div data-current-operand class='currentOperand' id='currentOperand'>0</div>
       </div>
 
-      <button data-value='Backspace' class="delete" id='delete'>⬅</button>
-      <button data-value='CE' class="clearAll" id='clearAll'>CE</button>
+      <button data-backspace class="delete" id='delete'>⬅</button>
+      <button data-clear-all class="clearAll" id='clearAll'>CE</button>
       <button data-clear-entry class="clear" id='clear'>C</button>
       <button data-value='negative' class="operator" id='negative'>+/-</button>
 
       <button data-num data-type='number' class="digit" id='7'>7</button>
       <button data-num data-type='number' class="digit" id='8'>8</button>
       <button data-num data-type='number' class="digit" id='9'>9</button>
-      <button data-value='/' data-type='operator' class="operator" id='divide'>/</button>
+      <button data-operator data-type='operator' class="operator" id='divide'>/</button>
 
       <button data-num data-type='number' class="digit" id='4'>4</button>
       <button data-num data-type='number' class="digit" id='5'>5</button>
       <button data-num data-type='number' class="digit" id='6'>6</button>
-      <button data-value='*' data-type='operator' class="operator" id='multiply'>*</button>
+      <button data-operator data-type='operator' class="operator" id='multiply'>*</button>
 
       <button data-num data-type='number' class="digit" id='1'>1</button>
       <button data-num data-type='number' class="digit" id='2'>2</button>
       <button data-num data-type='number' class="digit" id='3'>3</button>
-      <button data-value='+' data-type='operator' class="operator" id='add'>+</button>
+      <button data-operator data-type='operator' class="operator" id='add'>+</button>
 
-      <button data-value='.' class="decimal" id='decimal'>.</button>
+      <button class="decimal" id='decimal'>.</button>
       <button data-num data-type='number' class="digit" id='0'>0</button>
-      <button data-value='Enter' class="equals" id='equals'>=</button>
-      <button data-value='-' data-type='operator' class="operator" id='subtract'>-</button>
+      <button data-equals class="equals" id='equals'>=</button>
+      <button data-operator data-type='operator' class="operator" id='subtract'>-</button>
     </div>
 
     <div class='options'>

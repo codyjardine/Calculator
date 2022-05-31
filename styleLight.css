@@ -18,11 +18,11 @@
   font-family: 'Inconsolata';
   font-weight: bold;
   margin: 0;
+  cursor: default;
 }
 
 body {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -57,13 +57,16 @@ body {
 }
 
 .previousOperand {
+  padding-top: 15px;
   padding-right: 15px;
   font-size: 24px;
+  height: 50%;
 }
 
 .currentOperand {
   padding-right: 15px;
   font-size: 48px;
+  height: 50%;
 }
 
 button {
@@ -86,7 +89,8 @@ button {
   grid-template-columns: repeat(4, 100px);
   font-family: "Inconsolata", monospace;
   font-weight: 600;
-  box-shadow: 5px 5px 5px #000;
+  box-shadow: 5px 5px 5px black;
+  border: 2px solid black;
 }
 
 .containerCalculator > button {
@@ -127,8 +131,6 @@ button {
   cursor: pointer;
 }
 
-
-
 .toggle:before {
   content: "";
   height: 26px;
@@ -137,8 +139,7 @@ button {
   left: 4px;
   bottom: 4px;
   border-radius: 50%;
-  background-color: #E2E8F0;
-
+  background-color: white;
 }
 
 .checkbox {
@@ -149,19 +150,4 @@ button {
 
 .checkbox:checked + .toggle:before {
   transform: translateX(26px);
-}
-
-footer {
-  margin-top: auto;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-size: 20px;
-  padding-bottom: 15px;
-}
-
-.git:hover {
-  transform: scale(1.1);
 }

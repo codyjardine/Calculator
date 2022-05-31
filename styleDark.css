@@ -9,7 +9,7 @@
   --light-bg: #CBD2D9;
   --light-font: #000000;
   --light-display: #FFFFFF;
-  --light-keypadLeft: #7B8794;
+  --light-keypadLeft: #9AA5B1;
   --light-keypadRight: #CBD2D9;
   --light-hover: #DDDDDD;
 }
@@ -18,11 +18,11 @@
   font-family: 'Inconsolata';
   font-weight: bold;
   margin: 0;
+  cursor: default;
 }
 
 body {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -57,14 +57,16 @@ body {
 }
 
 .previousOperand {
+  padding-top: 15px;
   padding-right: 15px;
   font-size: 24px;
-  color: #333;
+  height: 50%;
 }
 
 .currentOperand {
   padding-right: 15px;
   font-size: 48px;
+  height: 50%;
 }
 
 button {
@@ -87,7 +89,8 @@ button {
   grid-template-columns: repeat(4, 100px);
   font-family: "Inconsolata", monospace;
   font-weight: 600;
-  box-shadow: 5px 5px 5px #000;
+  box-shadow: 5px 5px 5px black;
+  border: 2px solid black;
 }
 
 .containerCalculator > button {
@@ -128,6 +131,8 @@ button {
   cursor: pointer;
 }
 
+
+
 .toggle:before {
   content: "";
   height: 26px;
@@ -136,7 +141,8 @@ button {
   left: 4px;
   bottom: 4px;
   border-radius: 50%;
-  background-color: #E2E8F0;
+  background-color: white;
+
 }
 
 .checkbox {
@@ -149,17 +155,42 @@ button {
   transform: translateX(26px);
 }
 
-footer {
-  margin-top: auto;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-size: 20px;
-  padding-bottom: 15px;
+.checkbox2{
+  opacity:0;
+  position:absolute;
 }
 
-.git:hover {
-  transform: scale(1.1);
+.checkbox2:checked + .label .ball{
+  transform: translateX(24px);
+  
+}
+
+.label{
+  background-color: #111;
+  border-radius:50px;
+  display: flex;
+  justify-content: space-between;
+  position:relative;
+  padding :5px;
+  height:26px;
+  width:50px;
+  transform:scale(1.5);
+
+}
+
+.ball{
+  height:22px;
+  width:22px;
+  top:2px;
+  left:2px;
+  border-radius:50px;
+  background-color:#fff;
+  position:absolute;
+  transition:transform 0.2s linear;
+}
+.fa-moon{
+  color:#f1c40f;
+}
+.fa-sun{
+  color:#f39c12;
 }
